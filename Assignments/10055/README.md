@@ -1,4 +1,4 @@
-#Hashmat the Brave Warrior
+# Hashmat the Brave Warrior
 
 First program to submit to Onlinejudge.org
 
