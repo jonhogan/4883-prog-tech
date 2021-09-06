@@ -2,7 +2,7 @@
 
 First program to submit to Onlinejudge.org
 
-Read in two numbers, and computer the difference. Return the absolute value. Each value must be one it's own line.
+Read in two numbers, and compute the difference. Return the absolute value. Each value must be one it's own line.
 
 ## 10055 Hashmat the brave warrior
 Hashmat is a brave warrior who with his group of young soldiers moves from one place to another to
