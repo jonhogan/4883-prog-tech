@@ -20,3 +20,6 @@ than 232. Input is terminated by ‘End of File’.
 
 For each line of input, print the difference of number of soldiers between Hashmat’s army and his
 opponent’s army. Each output should be in seperate line
+
+
+[Online Judge](https://onlinejudge.org/external/100/10055.pdf)
