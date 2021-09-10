@@ -10,4 +10,6 @@ or not each of a number of sequences is a jolly jumper.
 Each line of input contains an integer n≤3000 followed by nintegers representing the sequence.
 
 ## Output
-For each line of input, generate a line of output saying ‘Jolly’ or ‘Not joll
+For each line of input, generate a line of output saying ‘Jolly’ or ‘Not jolly‘
+
+[Online Judge](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=979)
