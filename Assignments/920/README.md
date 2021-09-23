@@ -21,7 +21,7 @@ is n≤100.
 The first line of input contains C(0 <C<100), the number of test cases that follows.
 Each test case starts with a line containing the number Nof coordinate pairs. The remaining N
 lines for each test case contain the coordinates defining the landscape. Each of these lines contains two
-integers, xand y, separated by a single space. The first integer, x, is the X-coordinate, and the second,
+integers, x and y, separated by a single space. The first integer, x, is the X-coordinate, and the second,
 y, is the Y-coordinate of the considered point.
 ## Output
 The output is formed by a sequence of lines, one for each test case. Each line contains a single real
