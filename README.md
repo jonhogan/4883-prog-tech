@@ -2,8 +2,8 @@
 
 ## Assignments Folder
 
-|                                                  #                                                   | Folder Link                                                                                           | Assignment Description                                                                                                        | Status |
+|                                                  Problem #                                                   | Folder Link                                                                                           | Assignment Description                                                                                                        | Status |
 | :--------------------------------------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------ |
-| [10055](/Assignments/Hashmat) | [Program 1](/Assignments/Hashmat/README.md) | [Hashmat](Assignments/Hashmat)             | :heavy_check_mark: |
-| [05](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/161) | [A05](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/161) | [Traffic Lights](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/161)              |:heavy_check_mark:|
-|[06](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/10038)|[A06](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/10038)|[JollyJumpers](https://github.com/jonhogan/4883-prog-tech/tree/main/Assignments/10038)|:heavy_check_mark:|
+| [10055](/Assignments/Hashmat) | [Program 1](/Assignments/Hashmat) | [Hashmat](Assignments/Hashmat/README.md) | :heavy_check_mark: |
+| [161](/Assignments/Traffic_Lights) | [A05](/Assignments/Traffic_Lights)) | [Traffic Lights](/Assignments/Traffic_Lights/README.md) |:heavy_check_mark:|
+|[10038](/Assignments/Jolly_Jumpers|[A06](/Assignments/Jolly_Jumpers)|[Jolly Jumpers](/Assignments/Jolly_Jumpers/READ.me)|:heavy_check_mark:|
