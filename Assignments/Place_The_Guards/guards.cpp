@@ -13,6 +13,7 @@ using namespace std;
 //Red vs Blue days!
 int red = 0;            //Only these two 
 int blue = 1;           //used if bipartite
+
 int yellow = 2;         //Fail test color
 
 int main()
@@ -26,7 +27,7 @@ int main()
         int v;          //Number of vectors ( 1 <= v <= 200)
         int e;          //Number of edges (0 <= e <= 10000)
 
-        vector<vector<int>> Guards(v);
+        vector<vector<int>> guards(v);
         vector<int> color(v, yellow);   //Set all colors the the "fail test" color
 
         bool isBipartite = true;
@@ -34,6 +35,10 @@ int main()
         while(e--)
         {
             int f, t;   //Street junctions
+            cin >> f >> t;
+
+            guards[f].push_back(t);
+            guards[t].push_back(f);
 
         }
     }
