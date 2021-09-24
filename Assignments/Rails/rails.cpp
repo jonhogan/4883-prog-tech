@@ -1,7 +1,7 @@
 /***********************************
  * Name: Jonathan Hogan
  * Class: Programming Techniques
- * Problem: 10038 - Rails
+ * Problem: 514 - Rails
 ***********************************/
 
 #include <cstdio>
