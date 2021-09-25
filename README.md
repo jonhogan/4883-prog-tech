@@ -10,6 +10,6 @@
 |A07|[11080](Assignments/Place_The_Guards)|[Program 4](Assignments/Place_The_Guards)|[Place the Guards](Assignments/Place_The_Guards/11080.pdf) | :heavy_check_mark: |
 |A08.1|[10226](Assignments/Hardwood_Species)|[Program 5](Assignments/Hardwood_Species/10226.cpp)|[Hardwood Species](Assignments/Hardwood_Species/10226.pdf)| :soon:|
 |A08.2|[10194](Assignments/Football)|[Program 6](Assignments/Football/10194.cpp)|[Football](Assignments/Football/10194.pdf)| :soon:|
-|A09|[10017](Assignments/Towers_of_Hanoi)|[Program 7](Assignments/Towers_of_Hanoi/10017.cpp)|[TOwers of Hanoi](Assignments/Towers_of_Hanoi/10017.pdf)| :soon:|
+|A09|[10017](Assignments/Towers_of_Hanoi)|[Program 7](Assignments/Towers_of_Hanoi/10017.cpp)|[Towers of Hanoi](Assignments/Towers_of_Hanoi/10017.pdf)| :soon:|
 
 
