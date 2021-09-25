@@ -8,6 +8,8 @@
 #include <vector>
 #include <queue>
 
+typedef vector<int> vi;
+
 using namespace std;
 
 //Red vs Blue days!
@@ -41,6 +43,13 @@ int main()
             guards[t].push_back(f);
 
         }
-    }
 
+        int count = 0;
+        for (int i = 0; i < guards.size(); i++)
+        {
+            if (color[i] != yellow){continue;}
+
+            queue<int> guardQueue;
+        }
+    }
 }
