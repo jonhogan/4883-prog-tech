@@ -10,63 +10,81 @@
 
 using namespace std;
 
-typedef vector<int> vi;
-#define pb push_back
+#define PB push_back
 
-//Red vs Blue days!
-#define red  0            //Only these two 
-#define blue 1           //used if bipartite
+typedef vector<int> vi;     //Vector of ints
+typedef vector<vi> vii;     //Vector of vector of ints
+typedef queue<int> qi;      //Queue of ints
 
-#define yellow 2         //Fail test color
+static const int RED = 0;
+static const int BLUE = 1;
+
+static const int YELLOW = 2; //Only if not Bipartite
 
 int main()
-{
-    int t;              //Number of test cases (t < 80)
-
-    cin >> t;
-
-    while (t--)
+{  
+    int T;
+    cin >> T;
+    while ( T-- )
     {
-        int v;          //Number of vectors ( 1 <= v <= 200)
-        int e;          //Number of edges (0 <= e <= 10000)
-
-        vector<vi> guards(v);
-        vi color(v, yellow);   //Set all colors the the "fail test" color
-
+        int v, e;
+        cin >> v >> e;
+        
+        vii G(v);
+        vi color(v, YELLOW);
         bool isBipartite = true;
-
-        while(e--)
+        
+        while ( e-- )
         {
-            int f, t;   //Street junctions
+            int f, t;
             cin >> f >> t;
-
-            guards[f].pb(t);
-            guards[t].pb(f);
-
+            G[f].PB(t);
+            G[t].PB(f);
         }
 
-        int count = 0;
-        for (int i = 0; i < guards.size(); i++)
+        int guardCount = 0;
+        for (int j = 0; j < G.size() && isBipartite; ++j)
         {
-            if (color[i] != yellow){continue;}
+            if (color[j] != YELLOW){continue;}
 
-            queue<int> guardQueue;
+            qi q;
             int count[2] = {0};
 
-            color[i] = red;
-            count[color[i]]++;
-            guardQueue.push(i);
+            color[j] = RED;
+            count[color[j]]++;
+            q.push(j);
 
-            while(!guardQueue.empty() && isBipartite)
+            while (!q.empty() && isBipartite)
             {
-                int j = guardQueue.front();
-                guardQueue.pop();
-
-                for (int k = 0; k < guardQueue[j].size(); k++)
+                int u = q.front();
+                q.pop();
+                for (int i = 0; i < G[u].size(); ++i)
                 {
-
+                    int v = G[u][i];
+                    if (color[v] == color[u])
+                    {
+                        isBipartite = false;
+                        break;
+                    }
+                    else if (color[v] == YELLOW)
+                    {
+                        color[v] = 1 - color[u]; 
+                        count[color[v]]++;
+                        q.push(v);
+                    }
                 }
             }
+            
+            guardCount += max(1, min(count[RED], count[BLUE]));
         }
+
+        if (!isBipartite)
+            cout << -1 << endl;
+        else
+            cout << guardCount << endl;
     }
+
+    //cout << endl;
+
+    return 0;
 }
