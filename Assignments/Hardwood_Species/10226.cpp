@@ -20,7 +20,7 @@ int main()
 
     cin >> trash >> trash;
 
-    printf("%d\n\n", N);
+    //printf("%d\n\n", N);
 
     while (N > 0)
     {
