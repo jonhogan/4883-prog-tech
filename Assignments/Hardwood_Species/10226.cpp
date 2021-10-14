@@ -18,12 +18,14 @@ int main()
     scanf("%d", &N);
     string treeName;
 
-    cin >> trash >> trash;
-
-    //printf("%d\n\n", N);
+    if (cin.peek() == '\n'){cin.ignore();}
+    if (cin.peek() == '\n'){cin.ignore();}
+    
 
     while (N > 0)
     {
+
+        //cout << N << endl << endl;
         int i = 0;
 
         map<string, int> Trees;
@@ -47,8 +49,10 @@ int main()
         }
 
         N--;
-        cout << endl;
+        if (N == 0)
+        {
+            continue;
+        }else{cout << endl;}
     }
-
 }
 
