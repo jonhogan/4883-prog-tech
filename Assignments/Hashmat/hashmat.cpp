@@ -5,24 +5,25 @@
 */
 
 
-#include <iostream>
-
-#define endl "\n"
+#include <cstdio>
 
 using namespace std;
 
+int subtract(int x, int y)
+{
+    if (y == 0)
+        return x;
+    return subtract(x ^ y, (~x & y) << 1);
+}
+
 int main() {
-    long B = 0, A = 0, C = 0;
-        
-    while (cin >> A >> B) {
-        
-        C = A - B;
+    long long B, A;
+   
+    while (scanf("%lld %lld", &A, &B) != EOF) {
 
-        if (C < 0)
-        C *= -1;
-        
-        cout << C << "\n";
-
+       if(A > B){printf("%lld\n", A - B);}
+        else{printf("%lld\n", B - A);}
     }
     return 0;
 }
+
