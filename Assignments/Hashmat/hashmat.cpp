@@ -16,6 +16,8 @@ int main() {
 
        if(A > B){printf("%lld\n", A - B);}
         else{printf("%lld\n", B - A);}
+
+        
     }
     return 0;
 }
