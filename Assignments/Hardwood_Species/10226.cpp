@@ -14,7 +14,6 @@ using namespace std;
 int main()
 {
     int N;
-    string trash;
     scanf("%d", &N);
     string treeName;
 
@@ -25,7 +24,6 @@ int main()
     while (N > 0)
     {
 
-        //cout << N << endl << endl;
         int i = 0;
 
         map<string, int> Trees;
