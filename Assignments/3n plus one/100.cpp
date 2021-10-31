@@ -1,40 +1,56 @@
-#include <iostream>
+#include <cstdio>
+
 using namespace std;
 
-int three_n(long long x, long long y){
-    int count = 1;
-    int size;
-    int n;
 
-    if(x <= y){
-        n = x;
-        size = y;
-    }else{
-        n = y;
-        size = x;
+long long three_n(long long a, long long b)
+{
+  long long largest = 0;
+  
+  int itr, size, count;
+
+  if (a <= b){
+    itr = a;
+    size = b;
+  }else{
+    itr = a;
+    size = b;
+  }
+
+  for (int i = itr; i <= size; i++)
+  {
+    count = 1;
+    
+    long long n = i;
+
+    while(n != 1){
+
+      (n % 2 == 0)?n = n >> 1:n = (3 * n) + 1;
+      
+      count++;
+
     }
 
-    while( n != 1){
-        if(n%2){
-            n = (3*n)+1;
-        }else{n = n/2;}
+    long long size = count;
 
-        count++;
-    }
+    if (size > largest){largest = size;}
+  }
 
-    return count;
+  return largest;
 }
 
-int main(){
 
-    long long i = 0;
-    long long j = 0;
-    int k;
-    
-    while(scanf("%lld %lld", &i, &j) != EOF){
-        k = three_n(i, j);
+int main() 
+{
+  long long x, y = 0;
 
-        printf("%lld %lld %d\n", &i, &j, &k);
-    }
+  while (scanf("%lld %lld", &x, &y) != EOF)  
+  {
 
+    long long mathStuff = three_n(x, y);
+
+    printf("%lld %lld %lld\n", x, y, mathStuff);
+  }
+  
+  return 0;
 }
