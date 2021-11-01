@@ -25,11 +25,13 @@ bool compare(const peak &a, const peak &b){
     return a.x > b.x;
 }
 
-double power(float n, int e){
+double power(float number, int exponent){
 
-    for(int i = 1; i < e; i++){n = n * n;}
+    float n = number;
 
-    return n;
+    for(int i = 1; i < exponent; i++){n = number * n;}
+
+    return number;
 }
 
 double distance(peak a, peak b){
@@ -69,10 +71,9 @@ int main(){
 
                 maxHeight = peaks[i].y;
             }
-
-            cout << setprecision(2) << fixed << length << endl;
         }
 
+        cout << setprecision(2) << fixed << length << endl;
     }
 }
 
