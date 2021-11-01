@@ -7,17 +7,12 @@
 
 #include <cstdio>
 
-using namespace std;
-
 int main() {
     long long B, A;
    
     while (scanf("%lld %lld", &A, &B) != EOF) {
 
-       if(A > B){printf("%lld\n", A - B);}
-        else{printf("%lld\n", B - A);}
-
-        
+       (A > B)?printf("%lld\n", (A + ~B)+1):printf("%lld\n", (B + ~A)+1);
     }
     return 0;
 }
