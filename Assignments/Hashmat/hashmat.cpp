@@ -8,11 +8,11 @@
 #include <cstdio>
 
 int main() {
-    long long B, A;
+    long long army[2];
    
-    while (scanf("%lld %lld", &A, &B) != EOF) {
+    while (scanf("%lld %lld", &army[0], &army[1]) != EOF) {
 
-       (A > B)?printf("%lld\n", (A + ~B)+1):printf("%lld\n", (B + ~A)+1);
+       (army[0] > army[1])?printf("%lld\n", (army[0] + (~army[1])+1)):printf("%lld\n", (army[1] + (~army[0])+1));
     }
     return 0;
 }
