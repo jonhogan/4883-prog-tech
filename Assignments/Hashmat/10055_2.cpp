@@ -1,10 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    long long B, A;
-
+    long long B, A, C;
+    long long mask;
+    
     while (scanf("%lld %lld", &A, &B) != EOF) {
-        (A > B)?printf("%lld\n", (A + ~B) + 1):printf("%lld\n", (B + ~A) + 1);
+        C = A + ~B + 1;
+
+        mask = C >> (sizeof(long long)*8-1);
+        C = ((C + mask) ^ mask);
+
+        printf("%lld\n", C);
     }
     
 }
