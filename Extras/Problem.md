@@ -1,5 +1,5 @@
 ~~The 3n+1 problem~~
-~~Hastmat The Brave Warrior~~
+~~Hashmat The Brave Warrior~~
 ~~10071 - Back to High School Physics~~
 ~~11172 - Relational Operator~~
 ~~272 - TEX Quotes~~
@@ -8,8 +8,8 @@
 ~~10783 - Odd Sum~~
 ~~458 - The Decoder~~
 ~~10300 - Ecological Premium~~
-102 - Ecological Bin Packing
-494 - Kindergarten Counting Game
+~~102 - Ecological Bin Packing~~
+~~494 - Kindergarten Counting Game~~
 10035 - Primary Arithmetic
 10082 - WERTYU
 299 - Train Swapping
