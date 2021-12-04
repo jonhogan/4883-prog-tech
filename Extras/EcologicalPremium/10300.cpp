@@ -4,8 +4,7 @@ int main(){
 
     double testCase, farmer, farmYard, animal, envFriend, totalPay;
     double avgAnimal, avgPay, sum = 0;
-    bool firstRun = true;
-
+    
     while(scanf("%lf", &testCase) != EOF){
    
        
@@ -13,24 +12,17 @@ int main(){
         while(testCase){
             
             scanf("%lf", &farmer);
-            if(firstRun == false){
-                    printf("\n");
-                }
-
-            while(farmer){
+            
+            for(int i = 0; i < farmer; i++){
                 
                 scanf("%lf %lf %lf", &farmYard, &animal, &envFriend);
 
-                avgAnimal = farmYard / animal;
-                avgPay = avgAnimal * envFriend;
-                totalPay = avgPay * animal;
+                totalPay = envFriend * farmYard;
                 sum += totalPay;
-            
-                firstRun = false;
-                farmer--;
             }
+            
             long long x = (long long)sum;
-            printf("%lld", x);
+            printf("%lld\n", x);
             sum = 0;
             testCase--;
         }
