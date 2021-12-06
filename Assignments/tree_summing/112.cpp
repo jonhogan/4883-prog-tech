@@ -1,43 +1,48 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <stack>
-#include <algorithm>
-#include <sstream>
-
-using namespace std;
-
-bool my_isdigit(char ch)
-{
-    return std::isdigit(static_cast<unsigned char>(ch));
+#include <stdio.h>
+#define empty 0
+int ans;
+int solve(int sum, int target, char *c) {
+	int flag = 0, leaf = 0, token, neg;
+	while(*c == ' ' || *c == '\n')
+		*c = getchar();
+	if(*c == '(') {
+		token = 0, flag = 0, neg = 1;
+		while(*c = getchar()) {
+			if(*c >= '0' && *c <= '9')
+				token = token*10 + *c-'0', flag = 1;
+			else {
+				if(*c == '-')	neg = -1;
+				else break;
+			} 
+		}
+		token *= neg;
+		while(*c == ' ' || *c == '\n')
+			*c = getchar();
+		if(flag == 0) {
+			return empty;
+		}
+		int left = solve(sum+token, target, c);
+		while((*c = getchar()) != '(');
+		int right = solve(sum+token, target, c);
+		while((*c = getchar()) != ')');
+		if(left == 0 && right == 0) {
+			if(sum+token == target)
+				ans = 1;
+		}
+		return 1;
+	}
 }
-
-struct Node{
-  int data;
-  Node* left;
-  Node* right;
-  Node():data{0},left{nullptr},right{nullptr}{}
-  Node(int d):data{d},left{nullptr},right{nullptr}{}
-};
-
-char ch;
-string sch="";
-string lisp="";
-int answer = 0;
-
 int main() {
-  while(cin>>sch){
-    if(my_isdigit(*sch.c_str())){
-          
-      if(lisp.size() > 0){
-        cout<<lisp<<endl;
-      }
-      
-      lisp = "";
-      cout<<sch<<endl;
-    }else{
-      lisp += sch;
-    }
-  }
-  cout<<lisp<<endl;
-} 
+	int target;
+	char c;
+	while(scanf("%d", &target) == 1) {
+		ans = 0;
+		c = getchar();
+		solve(0, target, &c);
+		if(ans == 1)
+			puts("yes");
+		else
+			puts("no");
+	}
+    return 0;
+}
