@@ -11,7 +11,7 @@ int main(){
     int c1,c2,c3;
     int g1,g2,g3;
 
-    while(scanf("%d%d%d%d%d%d%d%d%d", &b1, &g1, &c1, &b2, &g2, &c2, &b3, &g3, &c3) != EOF){
+    while(scanf("%d %d %d %d %d %d %d %d %d", &b1, &g1, &c1, &b2, &g2, &c2, &b3, &g3, &c3) != EOF){
         int b = b1 + b2 + b3;
         int g = g1 + g2 + g3;
         int c = c1 + c2 + c3;

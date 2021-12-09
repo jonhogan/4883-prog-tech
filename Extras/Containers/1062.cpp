@@ -1,10 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
     string in;
     int cases = 1;
-    while(cin >> in, in != "end"){
+    
+    while(cin >> in){
         
         vector<char> containers;
         for(int i=0;i<in.size();i++){

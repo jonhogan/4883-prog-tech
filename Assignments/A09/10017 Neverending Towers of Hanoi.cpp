@@ -24,7 +24,7 @@ void print(){
     }
 }
 
-void solve_it(int n, int from, int buffer, int to){
+void solution(int n, int from, int buffer, int to){
     if (counter == m)
         return;
 
@@ -35,7 +35,7 @@ void solve_it(int n, int from, int buffer, int to){
         print();
     }
     else{
-        solve_it(n - 1, from, to, buffer);
+        solution(n - 1, from, to, buffer);
         if (counter == m)
             return;
         counter++;
@@ -43,22 +43,22 @@ void solve_it(int n, int from, int buffer, int to){
         stack[to].push_back(stack[from].back());
         stack[from].pop_back();
         print();
-        solve_it(n - 1, buffer, from, to);
+        solution(n - 1, buffer, from, to);
     }
 }
 
 int main(){
-    int n, Case = 1;
+    int n, count = 1;
 
-    while (scanf("%d%d", &n, &m) && n){
-        printf("Problem #%d\n", Case++);
+    while (scanf("%d %d", &n, &m) != EOF){
+        printf("Problem #%d\n", count++);
         counter = 0;
         for (int i = n; i; i--){
             stack[0].push_back(i);
         }
 
         print();
-        solve_it(n, 0, 1, 2);
+        solution(n, 0, 1, 2);
 
         for (int i = 0; i < 3; i++){
             stack[i].clear();

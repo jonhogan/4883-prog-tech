@@ -2,10 +2,10 @@
 using namespace std;
 
 int main(){
-    char ch = ' ';
+    char c = ' ';
 
-    while(scanf("%c", &ch) != EOF){
-        if(ch != '\n'){printf("%c", ch - 7);}
+    while(scanf("%c", &c) != EOF){
+        if(c != '\n'){printf("%c", c - ('1' - '*'));}
         else{printf("\n");}
     }
 }
