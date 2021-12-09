@@ -19,3 +19,5 @@ wall. The maximum value for the wall is length 50. The input terminates with a â
 ## Output
 For each wall length given in the input, your program must output the corresponding number of different
 patterns for such a wall in a separate line.
+
+-Fibonacci sequence
