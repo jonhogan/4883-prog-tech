@@ -4,49 +4,53 @@
 using namespace std;
 
 int main(){
-    string a, b;
-    int count;
-    bool carry = false;
-    int A, B;
 
-    while(cin >> a >> b){
+    unsigned int A, B;
+    int count, a, b;
+    bool carry;
+
+    while (scanf("%u %u", &A, &B) != EOF){
+        carry = false;
         count = 0;
-        if(a == "0" && b == "0"){break;}
-        if(a.length() < b.length()){
-            for(int i = a.length(); i > 0; i--){
-                A = int(a[i - 1]);
-                B = int(b[i - 1]);
-                if(carry){
-                    if(A + B +1 > 9){
-                        carry = true;
-                        count++; 
-                    }else{carry = false;}
+        
+        if (A == 0 && B == 0){break;}
+        if (B > A){
+            int temp = A;
+            A = B;
+            B = temp;
+        }
 
-                }else{
-                    if(A + B > 9){
-                        carry = true;
-                        count++; 
-                    }else{carry = false;}
-                }
-            }
-        }else{
-            for(int i = b.length(); i > 0; i--){
-                A = int(a[i - 1]);
-                B = int(b[i - 1]);
-                if(carry){
-                    if(A + B + 1 > 9){
-                        carry = true;
-                        count++; 
-                    }else{carry = false;}
+        while (A > 0){
+            a = A % 10;
+            //cout << a << endl;
+            b = B % 10;
+            //cout << b << endl;
+            A = A / 10;
+            //cout << A << endl;
+            B = B / 10;
+            //cout << B << endl;
 
-                }else{
-                    if(A + B > 9){
-                        carry = true;
-                        count++; 
-                    }else{carry = false;}
-                }
+            if (carry){
+                if (a + b + 1 >= 10){
+                    count++;
+                    carry = true;
+                    //cout <<"carry\n";
+                }else if(a + b + 1 < 10){
+                    carry = false;
+                    //cout <<"no carry\n";
+                    }
+            }else{
+                if (a + b >= 10){
+                    count++;
+                    carry = true;
+                    //cout <<"carry\n";
+                }else if (a + b < 10){
+                    carry = false;
+                    //cout <<"no carry\n";
+                    }
             }
         }
+
         if(count == 0){
             printf("No carry operation.\n");
         }else if(count == 1){
@@ -56,3 +60,4 @@ int main(){
         }
     }
 }
+    
