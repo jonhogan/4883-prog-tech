@@ -10,12 +10,12 @@
 ~~10300 - Ecological Premium~~
 ~~102 - Ecological Bin Packing~~
 ~~494 - Kindergarten Counting Game~~
-10035 - Primary Arithmetic
+~~10035 - Primary Arithmetic~~
 10082 - WERTYU
-299 - Train Swapping
+~~299 - Train Swapping~~
 10189 - Minesweeper
-11498 - Division of Nlogonia
-10018 - Reverse and Add
+~~11498 - Division of Nlogonia~~
+~~10018 - Reverse and Add~~
 11547 - Automatic Answer
 136 - Ugly Numbers
 591 - Box of Bricks
