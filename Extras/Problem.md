@@ -16,8 +16,8 @@
 10189 - Minesweeper
 ~~11498 - Division of Nlogonia~~
 ~~10018 - Reverse and Add~~
-11547 - Automatic Answer
-136 - Ugly Numbers
+~~11547 - Automatic Answer~~
+~~136 - Ugly Numbers~~
 591 - Box of Bricks
 11332 - Summing Digits
 113 - Power of Cryptography
