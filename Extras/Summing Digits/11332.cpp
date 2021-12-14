@@ -2,30 +2,28 @@
 
 int main()
 {
-    int t;
+    int sum;
     long long int n;
 
     scanf("%lld", &n);
     while(n != 0){
-        if(n==0)
-        break;
+       
+        sum = 0;
+        while(true){
 
-        t=0;
-        while(1){
-
-            while(n!=0){
-                t=t+(n%10);
-                n=n/10;
+            while(n != 0){
+                sum += (n%10);
+                n /= 10;
             }
-            if(t/10==0){
+            if(sum/10==0){
                 break;
             }else{
-                n=t;
-                t=0;
+                n = sum;
+                sum = 0;
             }
         }
 
-        printf("%d\n",t);
+        printf("%d\n", sum);
         scanf("%lld", &n);
     }
 }
