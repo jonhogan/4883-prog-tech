@@ -1,13 +1,16 @@
 #include <cstdio>
 
 int main(){
-    int count = 0, max, n, x;
+    int count = 0, max, n, x, t;
 
-    while(scanf("%d", n) != EOF){
+    scanf("%d", &t);
+
+    for(int i = 0; i < t; i++){
+        scanf("%d", &n);
         max = 0;
-
-        for(int i = 0; i < n; i++){
-            scanf("%d", x);
+        
+        for(int j = 0; j < n; j++){
+            scanf("%d", &x);
             if(x > max){max = x;}
         }
         count++;

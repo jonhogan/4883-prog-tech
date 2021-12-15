@@ -20,9 +20,9 @@
 ~~136 - Ugly Numbers~~
 591 - Box of Bricks
 ~~11332 - Summing Digits~~
-113 - Power of Cryptography
-11799 - Horror Dash
-10110 - Light, more light
+~~113 - Power of Cryptography~~
+~~11799 - Horror Dash~~
+~~10110 - Light, more light~~
 10812 - Beat the Spread!
 10370 - Above Average
 10004 - Bicoloring
